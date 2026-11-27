@@ -1,0 +1,6 @@
+{
+  "name": "나누리 수학포카 스튜디오",
+  "description": "기초학력 초등학생을 위한 마스코트형 수학 개념 포토카드 제작 및 다이소 바인더 규격 A4 인쇄 스튜디오",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

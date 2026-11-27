@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Gowun Dodum', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #F7F8FA;
+    color: #0F172A;
+  }
+}
+
+.font-game {
+  font-family: 'Jua', sans-serif;
+}
+
+.font-body {
+  font-family: 'Gowun Dodum', sans-serif;
+}
+
+.font-mono-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* A4 Print Rules for Photocard Portrait & Worksheet Landscape */
+@media print {
+  html,
+  body,
+  #root,
+  .app-print-root {
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only-sheet {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+
+  .a4-print-page {
+    width: 210mm !important;
+    height: 296.5mm !important;
+    overflow: hidden !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .a4-print-page-landscape {
+    width: 296.5mm !important;
+    height: 209.5mm !important;
+    overflow: hidden !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .print-only-sheet > .a4-print-page:only-child,
+  .print-only-sheet > .a4-print-page:last-child,
+  .print-only-sheet > .a4-print-page-landscape:only-child,
+  .print-only-sheet > .a4-print-page-landscape:last-child {
+    page-break-after: auto !important;
+    break-after: auto !important;
+  }
+}
